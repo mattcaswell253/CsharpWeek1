@@ -1,0 +1,12 @@
+<h1> You Created A New Contact! </h2>
+
+<ul>
+@foreach (var contact in Model)
+{
+<li>@contact.GetName()</li>
+<li>@contact.GetPhoneNumber()</>
+<li>@contact.GetAddress()</li>
+}
+</ul>
+
+<h3><a href="/">Home</a></h3>

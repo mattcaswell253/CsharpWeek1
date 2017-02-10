@@ -4,12 +4,13 @@ namespace AddressBook.Objects
 {
   public class Contact
   {
+    private static List<Contact> _contactList = new List<Contact> {};
+    
     private string _name;
     private string _phone-number;
     private string _address;
     private int _id;
 
-    private static List<Contact> _contactList = new List<Contact> {};
 
     public Contact(string newName, string newPhoneNumber,
     string newAddress)
