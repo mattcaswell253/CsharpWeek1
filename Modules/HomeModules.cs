@@ -1,6 +1,6 @@
 using Nancy;
 using System.Collections.Generic;
-using AdressBook.Objects;
+using AddressBook.Objects;
 
 namespace AddressBookApp
 {
@@ -19,9 +19,9 @@ namespace AddressBookApp
       Post["/contact/new"] = _ => {
         var newContact = new Contact(Request.Form["contact-name"], Request.Form["address"], Request.Form["phone-number"]);
         List<Contact> allContacts = Contact.GetAll();
-        return View["contact_new.cshtml", AllContacts];
-      }
+        return View["contact_new.cshtml"];
+      };
 
-    };
+    }
   }
 }
