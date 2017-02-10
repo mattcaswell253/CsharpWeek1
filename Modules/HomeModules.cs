@@ -9,8 +9,8 @@ namespace AddressBookApp
     public HomeModule()
     {
       Get["/"] = _ => {
-        List<Contact> contactList = Contact.GetAll();
-        return View["index.cshtml"];
+      var contactList = Contact.GetAll();
+        return View["index.cshtml", contactList];
       };
 
       Get["/address/form"] = _ => {
@@ -21,6 +21,16 @@ namespace AddressBookApp
         var newContact = new Contact(Request.Form["contact-name"], Request.Form["address"], Request.Form["phone-number"]);
         return View["contact_new.cshtml", newContact];
       };
+
+      Get["/contacts{id}"] = parameters => {
+        var contact = Contact.Find(parameters.id);
+        return View["view_contact.cshtml", contact];
+
+      };
+
+
+
+
 
     }
   }
