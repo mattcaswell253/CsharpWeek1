@@ -7,5 +7,8 @@
 {
   <h3><a href='/contacts/@contact.GetId()'>@contact.GetName()</a></h3>
 }
-
 <h3> <a href="/address/form">Add Contact</a></h3>
+
+<form action="/contacts/clear" method="post">
+  <button type="submit" name"button">Delete All Contacts</button>
+</form>
