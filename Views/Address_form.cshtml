@@ -1,12 +1,19 @@
+@{
+  Layout="shared/_Layout.cshtml";
+}
+
 <h1>Address Form</h1>
 
 <form class="addressInput" action="/contact/new" method="post">
   <label for="contact-name">Name:</label>
   <input type="text" name="contact-name">
+  <br>
   <label for="address">Address:</label>
   <input type="text" name="address">
+  <br>
   <label for="phone-number">Phone Number:</label>
   <input type="text" name="phone-number">
+  <br>
   <button type="submit">Add To Contacts!</button>
 </form>
 

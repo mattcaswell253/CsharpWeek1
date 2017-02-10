@@ -1,4 +1,9 @@
-<h1>@Model.GetName() Contact Info:</h1>
+@{
+  Layout="shared/_Layout.cshtml";
+}
+<div class="jumbotron">
+  <h1>@Model.GetName()'s' Contact Info:</h1>
+</div>
 <ul>
 <li>@Model.GetPhoneNumber()</>
 <li>@Model.GetAddress()</li>
